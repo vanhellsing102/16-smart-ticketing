@@ -53,15 +53,26 @@ function showPrice(elementId, innerText, price){
 }
 
 // disabled input*******
-function disabledButton(elementId, elementId2){
+function disabledButton(elementId, elementId2, elementId3, elementId4){
     const selectedSeat = document.getElementById(elementId);
     const selectedSeatInnerText = selectedSeat.innerText;
     const selectedSeatToNumber = parseInt(selectedSeatInnerText);
-    
+
     const disabledInput = document.getElementById(elementId2);
+
+    const disabledButton = document.getElementById(elementId3);
 
     if (selectedSeatToNumber === 4) {
         disabledInput.removeAttribute('disabled');
+    }
+    else if(selectedSeatToNumber === 1){
+        document.getElementById('number-input').addEventListener('keyup', function(event){
+            const value = event.target.value;
+            const valueToNumber = parseInt(value);
+            if (typeof valueToNumber === 'number') {
+                disabledButton.removeAttribute('disabled');
+            } 
+        })
     }
 }
 

@@ -22,7 +22,7 @@ for (const seat of selectSeat) {
         showPrice('ticket-and-price-area', seatName, 550);
 
         // console.log(event.target);
-        disabledButton('selected-seat','coupon-input');
+        disabledButton('selected-seat','coupon-input', 'submit-btn');
 
     })
 }
@@ -45,5 +45,4 @@ document.getElementById('coupon-input').addEventListener('keyup', function(event
         removeInvalidCouponCode('apply-button', 'alert-text');
     }
 })
-
 

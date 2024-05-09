@@ -11,7 +11,7 @@
     <title>smart ticketing</title>
 </head>
 <body>
-    <header class="md:px-24 px-0">
+    <header id="header-section" class="md:px-24 px-0">
         <!-- navbar start -->
         <nav class="py-3 font-raleway">
             <div class="navbar bg-base-100">
@@ -82,7 +82,7 @@
         <!-- banner end -->
 
     </header>
-    <main class="mt-20">
+    <main id="main-section" class="mt-20">
 
         <!-- best offer section start -->
         <section class="font-raleway text-center md:px-24 px-0">
@@ -293,7 +293,7 @@
                                 <div class="label">
                                   <span class="label-text">Phone Number*</span>
                                 </div>
-                                <input type="number" placeholder="Enter your phone number" class="input input-bordered w-full max-w-xs" />
+                                <input id="number-input" type="number" placeholder="Enter your phone number" class="input input-bordered w-full max-w-xs" />
                             </label>
                             <label class="form-control w-full max-w-xs">
                                 <div class="label">
@@ -302,7 +302,7 @@
                                 <input type="email" placeholder="Enter your email id" class="input input-bordered w-full max-w-xs" />
                             </label>
                             <div class="mt-7">
-                                <button class="btn w-full bg-[#1DD100] rounded-xl text-[#ffff] font-bold font-raleway text-[16px]" disabled>Submit</button>
+                                <a href="modal.html" target="_parent" id="submit-btn" class="btn w-full bg-[#1DD100] rounded-xl text-[#ffff] font-bold font-raleway text-[16px]" disabled>Submit</a>
                             </div>
                             <div class="text-[#03071299] text-sm flex justify-around items-center underline decoration-solid mt-5">
                                 <a href="">Terms and Conditions</a>
@@ -315,9 +315,9 @@
             <!-- seat plan section end -->
         </section>
         <!-- seat section end -->
-    </main>
 
-    <footer class="bg-black text-white">
+    </main>
+    <footer id="footer-section" class="bg-black text-white">
         <div class=" px-0 md:px-24 py-24">
             <div class="flex justify-between border-b-2 border-dashed pb-8">
                 <div class="space-y-3">
@@ -347,7 +347,6 @@
             </div>
         </div>
     </footer>
-
 
     
     <!-- js -->
