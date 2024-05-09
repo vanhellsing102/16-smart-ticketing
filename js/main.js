@@ -46,3 +46,15 @@ document.getElementById('coupon-input').addEventListener('keyup', function(event
     }
 })
 
+// modal section and submit button**
+function submit(){
+    const modal = document.getElementById('modal');
+    modal.classList.remove('hidden');
+
+    const footer = document.getElementById('footer-section');
+    footer.classList.add('hidden');
+    const main = document.getElementById('main-section');
+    main.classList.add('hidden');
+    const header = document.getElementById('header-section');
+    header.classList.add('hidden');
+}
