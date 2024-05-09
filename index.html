@@ -264,21 +264,22 @@
                                 <p>Total Price</p>
                                 <p>BDT <span id="total-price">0</span></p>
                             </div>
-                            <div class="flex px-5">
+                            <div id="discount-area" class="flex justify-between p-2 items-center">
+                                
+                            </div>
+                            <div id="coupon-area-hidden" class="flex px-5">
                                 <label class="form-control w-full max-w-xs">
                                     <input disabled id="coupon-input" type="text" placeholder="Have any coupon?" class="input border-none outline-none w-full max-w-xs rounded-none" />
                                 </label>
                                 <button id="apply-button" class="btn bg-[#1DD100] rounded-none">Apply</button>
                             </div>
-                            <table class="table">
-                                <tbody>
-                                    <tr>
-                                        <td>Grand Total</td>
-                                        <td></td>
-                                        <td >BDT <span id="grand-price">0</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div id="alert-text" class="text-center text-red-600 hidden">
+                                <h1 class="">Invalid Coupon Code !</h1>
+                            </div>
+                            <div class="flex justify-between p-2 items-center">
+                                <p>Grand Total</p>
+                                <p>BDT <span id="grand-price">0</span></p>
+                            </div>
                         </div>
                         <!-- input field -->
                         <div class="mt-7">
@@ -301,7 +302,7 @@
                                 <input type="email" placeholder="Enter your email id" class="input input-bordered w-full max-w-xs" />
                             </label>
                             <div class="mt-7">
-                                <button class="btn w-full bg-[#1DD100] rounded-xl text-[#ffff] font-bold font-raleway text-[16px]">Submit</button>
+                                <button class="btn w-full bg-[#1DD100] rounded-xl text-[#ffff] font-bold font-raleway text-[16px]" disabled>Submit</button>
                             </div>
                             <div class="text-[#03071299] text-sm flex justify-around items-center underline decoration-solid mt-5">
                                 <a href="">Terms and Conditions</a>

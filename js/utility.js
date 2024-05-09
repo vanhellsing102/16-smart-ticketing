@@ -47,6 +47,9 @@ function showPrice(elementId, innerText, price){
     const newPrice = oldPriceToNumber + priceToNumber;
     // console.log(newPrice);
     oldPrice.innerText = newPrice; 
+
+    const grandPrice = document.getElementById('grand-price');
+    grandPrice.innerText = newPrice;
 }
 
 // disabled input*******
@@ -63,13 +66,70 @@ function disabledButton(elementId, elementId2){
 }
 
 
-// offer price******
+// offer price with new15 coupon******
 
-function offerPrice(elementId, elementId2){
+function offerPriceNewCoupon(elementId, elementId2){
     const totalPrice = document.getElementById(elementId);
     const totalPriceInnerText = totalPrice.innerText;
     const totalPriceToNumber = parseInt(totalPriceInnerText);
 
-    const grandPrice = document.getElementById(elementId2);
+    const disCountPrice = totalPriceToNumber - (totalPriceToNumber * 15 / 100);
+    const offerPrice = totalPriceToNumber - disCountPrice;
 
+    document.getElementById('apply-button').addEventListener('click', function(){
+        const grandPrice = document.getElementById(elementId2);
+        grandPrice.innerText = disCountPrice;
+
+        const disCountArea = document.getElementById('discount-area');
+        const p = document.createElement('p');
+        p.innerText = 'Discount price';
+        disCountArea.appendChild(p);
+        const p2 = document.createElement('p');
+        p2.innerText = `BDT ${offerPrice}`;
+        disCountArea.appendChild(p2);
+
+        const couponAreaHidden = document.getElementById('coupon-area-hidden');
+        couponAreaHidden.classList.add('hidden');
+    })
+}
+
+// offer price with couple20 coupon******
+
+function offerPriceCoupleCoupon(elementId, elementId2){
+    const totalPrice = document.getElementById(elementId);
+    const totalPriceInnerText = totalPrice.innerText;
+    const totalPriceToNumber = parseInt(totalPriceInnerText);
+
+    const disCountPrice = totalPriceToNumber - (totalPriceToNumber * 20 / 100);
+    const offerPrice = totalPriceToNumber - disCountPrice;
+
+    document.getElementById('apply-button').addEventListener('click', function(){
+        const grandPrice = document.getElementById(elementId2);
+        grandPrice.innerText = disCountPrice;
+
+        const disCountArea = document.getElementById('discount-area');
+        const p = document.createElement('p');
+        p.innerText = 'Discount price';
+        disCountArea.appendChild(p);
+        const p2 = document.createElement('p');
+        p2.innerText = `BDT ${offerPrice}`;
+        disCountArea.appendChild(p2);
+
+        const couponAreaHidden = document.getElementById('coupon-area-hidden');
+        couponAreaHidden.classList.add('hidden');
+    })
+}
+
+// invalid coupon code ****
+function removeInvalidCouponCode(elementId, elementId2){
+    document.getElementById(elementId).addEventListener('click', function(){
+        const alertText = document.getElementById(elementId2);
+        alertText.classList.remove('hidden');
+    })
+}
+function addInvalidCouponCode(elementId, elementId2){
+    document.getElementById(elementId).addEventListener('click', function(){
+        const alertText = document.getElementById(elementId2);
+        alertText.classList.add('hidden');
+    })
 }
